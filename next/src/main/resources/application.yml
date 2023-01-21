@@ -1,0 +1,21 @@
+spring:
+  # Failed to bind properties under '' to com.zaxxer.hikari.HikariDataSource: ???  datasource ??
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: username
+    password: password
+
+    hikari:
+      driver-class-name: org.mariadb.jdbc.Driver
+      connection-init-sql: SELECT 1
+      minimum-idle: 1
+      idle-timeout: 300000
+      maximum-pool-size: 31
+      max-lifetime: 540000
+      username: username
+      password: password
+
+
+  datasource-site:
+    use: true
+    url: jdbc:mariadb://localhost:3306/db?serverTimezone=UTC&autoReconnect=true&allowMultiQueries=true
