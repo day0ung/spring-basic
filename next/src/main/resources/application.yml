@@ -2,8 +2,8 @@ spring:
   # Failed to bind properties under '' to com.zaxxer.hikari.HikariDataSource: ???  datasource ??
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    username: ENC(7I64ijiUQeTTzaxkPrcYGg==)
-    password: ENC(UMYnchPoq0R/0/I2HNNb2w==)
+    username: ENC(8tolwLfQQQ9DPdrlKftzDg==)
+    password: ENC(LkwenwLQXA0HpQeSSYYoww==)
 
     hikari:
       driver-class-name: org.mariadb.jdbc.Driver
@@ -12,21 +12,21 @@ spring:
       idle-timeout: 300000
       maximum-pool-size: 31
       max-lifetime: 540000
-      username: ENC(7I64ijiUQeTTzaxkPrcYGg==)
-      password: ENC(UMYnchPoq0R/0/I2HNNb2w==)
+      username: ENC(8tolwLfQQQ9DPdrlKftzDg==)
+      password: ENC(LkwenwLQXA0HpQeSSYYoww==)
 
 
   datasource-batch:
     use: true
-    url: ENC(fqbM9YOxKF+O1VKyEsv6ARwgd1O7ZuE2m+S5ZmjsIPh0UYdzNT+BSvp0ZQCEkq3EufEZqzU1gRJ1OvXxtRQHk0b0UDDCic/ELBidCTFLNDy+XGkwXBJ92+xLSsm27Qp52NbgnNzVbbMMn+xPZ8DATayGWEWVbfVj)
+    url: ENC(iSCnFn7+w0OtKBE8YrvJ93eyikGtUMS7pZ/PzS4STjucgX3WTdOMig5EyxIf1g1sZkWokWzCGzG3+IfCpPxiDPVAI+bJSNrDaqEDqNmdWKAoUXXi+rTlWeAVAqD2pb9IT4A/ETQHxpkFMrO2uTmCzRo+agnKtyPl)
   datasource-lotto:
     use: false
-    url: ENC(DMSVk2FVFitt4eATHFn32ZstuEG10CtyIwywBvNhWH3OOi+V4oFpbHzBD6QRnoVg8+OSRZuyNpcfg/nzeFUlqj+vA3Pz8uekhOrm9Zd04nAb/8JztkLfbPZUMovjJYeAu65cN8TXExk2sVsLL13UUPXMQmexSTFI)
+    url: ENC(9Uzrmtjv64kzbo+KDPtPWfPWN2rBzOKHX28J8aLFtPQ4hPypDPADqBKLQahAjwf8LYMa/bbXmKjeJb7A1IzJ4b+5YT3eWxcE2vk9Pa7D0iuZ6i09sFJwHdmlfDVWBTrJRUx/e9kMwzIflXDzJ5F7qVX7qJG5BwSe)
 
 jasypt:
   encryptor:
     bean: jasyptStringEncryptor
-    password: day0ung
+    password: 
     algorithm: PBEWithMD5AndDES
     salt-generator-classname: org.jasypt.salt.RandomSaltGenerator
     string-output-type: base64
