@@ -18,7 +18,7 @@ import org.springframework.context.annotation.Configuration;
 import javax.sql.DataSource;
 
 @Configuration
-@ConditionalOnProperty(prefix = "spring.", name = "datasource-site.use", havingValue = "true", matchIfMissing = false)
+@ConditionalOnProperty(prefix = "spring.", name = "datasource-batch.use", havingValue = "true", matchIfMissing = false)
 @MapperScan(value="com.basic.next.dao", sqlSessionFactoryRef="simpleSqlSessionFactory")
 public class SimpleDBConfig {
 
@@ -34,7 +34,7 @@ public class SimpleDBConfig {
     @Bean(name = "simpleDataSource")
     public DataSource simpleDataSource() {
         HikariConfig hikariConfig = dbConfiguration.hikariConfig();
-        hikariConfig.setJdbcUrl(env.getProperty("spring.datasource-site.url"));
+        hikariConfig.setJdbcUrl(env.getProperty("spring.datasource-batch.url"));
         DataSource db = new HikariDataSource(hikariConfig);
         return db;
     }
