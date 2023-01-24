@@ -18,7 +18,7 @@ spring:
 
   datasource-batch:
     use: true
-    url: ENC(iSCnFn7+w0OtKBE8YrvJ93eyikGtUMS7pZ/PzS4STjucgX3WTdOMig5EyxIf1g1sZkWokWzCGzG3+IfCpPxiDPVAI+bJSNrDaqEDqNmdWKAoUXXi+rTlWeAVAqD2pb9IT4A/ETQHxpkFMrO2uTmCzRo+agnKtyPl)
+    url: ENC(Y4X/JjWLC0L4pc5vy776MRPdEbgXgVgzuLGFxGidZHmZ4VgUtHzzVF209Xtok0GWWgu2PtQHyioIAZGRU+nvyaf+299lxeC/plQ+8/6MTqa5tw+flc3XQInAuS6mZsGPYZNN+q6c/nHY+xfNI0/kbeequsCYWDd/)
   datasource-lotto:
     use: false
     url: ENC(9Uzrmtjv64kzbo+KDPtPWfPWN2rBzOKHX28J8aLFtPQ4hPypDPADqBKLQahAjwf8LYMa/bbXmKjeJb7A1IzJ4b+5YT3eWxcE2vk9Pa7D0iuZ6i09sFJwHdmlfDVWBTrJRUx/e9kMwzIflXDzJ5F7qVX7qJG5BwSe)

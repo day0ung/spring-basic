@@ -3,7 +3,6 @@ package com.basic.next.encryption;
 import com.ulisesbocchio.jasyptspringboot.annotation.EnableEncryptableProperties;
 import org.jasypt.encryption.StringEncryptor;
 import org.jasypt.encryption.pbe.PooledPBEStringEncryptor;
-import org.jasypt.encryption.pbe.StandardPBEStringEncryptor;
 import org.jasypt.encryption.pbe.config.SimpleStringPBEConfig;
 import org.jasypt.encryption.pbe.config.StringPBEConfig;
 import org.springframework.boot.context.properties.ConfigurationProperties;
