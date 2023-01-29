@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info" monitorInterval="30">
+    <Properties>
+        <Property name="LOG_PATTERN">%style{[${sys:PID}]}{magenta}[%highlight{%5p}{FATAL=red blink, ERROR=red, WARN=yellow bold, INFO=green, DEBUG=green bold, TRACE=blue}] %d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}} %highlight{%-14t}{FATAL=red blink, ERROR=red, WARN=yellow bold, INFO=green, DEBUG=green bold, TRACE=blue} %-50style{%logger{0}::%M}{cyan} : %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}</Property>
+        <Property name="LOG_DIR">./logs</Property>
+    </Properties>
+
+    <Appenders>
+        <Console name="console_log" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="${LOG_PATTERN}" disableAnsi="false"/>
+        </Console>
+
+        <RollingFile name="info_log"
+                     fileName="${LOG_DIR}/info.log"
+                     filePattern="${LOG_DIR}/info.%d{yyyy-MM-dd}.%i.log.gz">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+            </Policies>
+            <DefaultRolloverStrategy>
+                <Delete basePath="${LOG_DIR}">
+                    <IfFileName glob="*.log" />
+                    <IfLastModified age="7d" />
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+
+        <RollingFile name="error_log"
+                     fileName="${LOG_DIR}/error.log"
+                     filePattern="${LOG_DIR}/error.%d{yyyy-MM-dd}.%i.log.gz">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+            </Policies>
+            <DefaultRolloverStrategy>
+                <Delete basePath="${LOG_DIR}">
+                    <IfFileName glob="*.log" />
+                    <IfLastModified age="7d" />
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+
+
+    </Appenders>
+
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="console_log"/>
+            <AppenderRef ref="info_log" />
+            <AppenderRef ref="error_log" level="ERROR"/>
+        </Root>
+    </Loggers>
+
+    <logger name="org.springframework" level="DEBUG">
+        <AppenderRef ref="console_log"/>
+        <AppenderRef ref="error_log"/>
+    </logger>
+
+</Configuration>
