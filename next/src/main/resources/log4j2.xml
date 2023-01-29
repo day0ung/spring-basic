@@ -51,9 +51,5 @@
         </Root>
     </Loggers>
 
-    <logger name="org.springframework" level="DEBUG">
-        <AppenderRef ref="console_log"/>
-        <AppenderRef ref="error_log"/>
-    </logger>
 
 </Configuration>
